@@ -6,6 +6,6 @@ services:
       dockerfile: Dockerfile
     user: "${UID:-1000}:${GID:-1000}"
     volumes:
-      - ./:/trading_workspace
+      - ../:/trading_workspace
     ports:
       - "8888:8888"
