@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements file
-COPY req.txt .
+COPY .docker/req.txt .
 
 # Install Python packages
 RUN pip install --no-cache-dir -r req.txt

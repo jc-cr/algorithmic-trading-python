@@ -2,10 +2,12 @@ version: '3'
 services:
   jupyter:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: .docker/Dockerfile
     user: "${UID:-1000}:${GID:-1000}"
     volumes:
       - ../:/trading_workspace
     ports:
       - "8888:8888"
+    environment:
+      - ADV_KEY=${ADV_KEY}
