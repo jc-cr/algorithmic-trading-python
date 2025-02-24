@@ -11,3 +11,4 @@ services:
       - "8888:8888"
     environment:
       - ADV_KEY=${ADV_KEY}
+      - POLY_KEY=${POLY_KEY}
